@@ -96,8 +96,9 @@
 	  <!-- Project section-->
       <div class="w3-container w3-padding-32" id="project">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Project details</h3>
+		<button type="button" class="collapsible">Project 1</button>
+		<div>
 		<div class = "w3-display-container">
-			<h4>Project 1</h4>
 			<h5 class="w3-border-bottom w3-border-light-grey w3-padding-16">Features and Amenities</h5>
 			<div class="div_top_hypers">
 			<ul class="ul_top_hypers">
@@ -141,7 +142,7 @@
 			  <img class="myImg" src="images/project/Photo4.jpg" alt="Picture 4" style="width:20%" height="150" id="Photo4">
         </div>
 		<br/>
-		 <div class="w3-display-container">
+		<div class="w3-display-container">
               <img class="myImg" src="images/project/Photo5.jpg" alt="Picture 5" style="width:20%" height="150" id="Photo5">
 			  <img class="myImg" src="images/project/Photo6.jpg" alt="Picture 6" style="width:20%" height="150" id="Photo6">
 			  <img class="myImg" src="images/project/Photo7.jpg" alt="Picture 7" style="width:20%" height="150" id="Photo7">
@@ -151,7 +152,62 @@
 		 <div class="w3-display-container">
               <img class="myImg" src="images/project/Photo9.jpg" alt="Picture 9" style="width:20%" height="150" id="Photo9">
         </div>
-		
+		</div>
+		<br/><br/>
+		<button type="button" class="collapsible">Project 2</button>
+		<div>
+		<div class = "w3-display-container">
+			<p>&nbsp;Thought of buying a dream home in your Dream city "MUMBAI".We are here to help you out to select proper location,Registered Projects
+			<br><br>&nbsp;Most awaited project in Lower Parel with Decks. Don't forget to contact us</br></br>
+			<br>&nbsp;Prices   AV - 2.79cr onwards*</br></p>
+			<h5 class="w3-border-bottom w3-border-light-grey w3-padding-16">&nbsp;Project Details-</h5>
+			<div class="div_top_hypers">
+				<ul class="ul_top_hypers">
+					<li>&#8227; 33 Storey exclusive gated development   &emsp;</li>
+					<li>&#8227; Four flats on a floor  &emsp;</li>
+					<li>&#8227; Mahalaxmi Racecourse view  &emsp;</li>
+					<li>&#8227; Free hold land parcel &emsp;</li>
+				</ul>
+			</div>
+			
+			<h5 class="w3-border-bottom w3-border-light-grey w3-padding-16">&nbsp;Amenities and Connectivity</h5>
+			<p>&nbsp;All modern amenities are present like party lawn, party decks, kids play area, gym,  banquet halls etc.</p>
+			<div class="div_top_hypers">
+				<ul>
+					<li>&nbsp;Lower parel station and upcoming metro station is of 10 minute walkin distance.   &emsp;</li>
+					<li>&nbsp;15mins drive to Bandra Worli Sealink   &emsp;</li>
+					<li>&nbsp;High Street Phoenix and Palladium at walking distance  &emsp;</li>
+					<li>&nbsp;Peninsula Corporate Park,Peninsula Business Park,Kamala Mills is nearby vicinity.  &emsp;</li>
+				</ul>
+			</div>
+			
+			<div class = "w3-display-container">
+			<h5 class="w3-border-bottom w3-border-light-grey w3-padding-16">&nbsp;Carpet Areas</h5>
+			<table class="w3-table">
+				<tr class="w3-cell-row">
+					<td class="w3-half">&nbsp;2 BHK</td>
+					<td class="w3-half">&nbsp;Approx 676 /679 sqft</td>
+				</tr>
+				<tr class="w3-cell-row">
+					<td class="w3-half">&nbsp;2bhk with Deck area</td>
+					<td class="w3-half">&nbsp;Approx 732/739 sqft</td>
+				</tr>
+			</table>
+			</div>
+			
+			<h5 class="w3-border-bottom w3-border-light-grey w3-padding-16">&nbsp;Note</h5>
+			<div class="div_top_hypers">
+			<ul>
+				<li>&nbsp;Lowest OCR&emsp;</li>
+				<li>&nbsp;EMI relaxation plan is available&emsp;</li>
+			</ul>
+			</div>
+			<br/><br/>
+			<div class="w3-display-container">
+              <img class="myImg" src="images/project/Photo10.jpg" alt="Picture 1" style="width:30%" height="200" id="Photo10">
+			</div>
+		</div>
+		</div>
       </div>
 	  
 	  <!-- The Modal -->
@@ -255,6 +311,22 @@
 		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() {
 		modal.style.display = "none";
+		}
+		
+		
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} else {
+			content.style.display = "block";
+			}
+		});
 		}
 </script>
 
